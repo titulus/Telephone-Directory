@@ -15,5 +15,6 @@ ad.getUsersForGroup(groupName, function(err, users) {
   if (! users) console.log('Group: ' + groupName + ' not found.');
   else {
     console.log(users);
+    sorter.init();
   }
 });
