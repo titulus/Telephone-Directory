@@ -1,0 +1,1 @@
+require('nw.gui').Window.get().showDevTools(); //show console at start
