@@ -1,4 +1,4 @@
-require('nw.gui').Window.get().showDevTools(); //show console at start
+// require('nw.gui').Window.get().showDevTools(); //show console at start
 require('nw.gui').Window.get().maximize(); //maximize windows on start
 
 var credentials = require('./private.js'); //config include domain user and pass
@@ -30,9 +30,9 @@ function users2table (users) {
 		// console.log(user);
 		tablehtml+='<tr>';
 		tablehtml+=	'<td>'+user.cn+'</td>'
-		tablehtml+=	'<td>'+user.telephoneNumber+'</td>'
-		tablehtml+=	'<td>'+user.mail+'</td>'
-		tablehtml+=	'<td>'+user.department+'</td>'
+		tablehtml+=	'<td>'+((user.telephoneNumber)?user.telephoneNumber:'')+'</td>'
+		tablehtml+=	'<td>'+((user.mail)?user.mail:'')+'</td>'
+		tablehtml+=	'<td>'+((user.department)?user.department:'')+'</td>'
 		tablehtml+='</tr>'
 	}
 	// console.log(tablehtml);
