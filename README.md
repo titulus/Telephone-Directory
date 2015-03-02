@@ -8,7 +8,7 @@ telephone book based on MS ActiveDirectory
 1. first of all install [node-webkit](http://nwjs.io/)
 2. download and unpack last [release](https://github.com/titulus/Telephone-Directory/releases)
 3. install [node-activedirectory](https://github.com/gheeres/node-activedirectory)
-4. add `private.js` into the source folder
+4. add `private.js` into the source folder and [fill](#privatejs) it
 5. run `path\to\nw path\to\telephone-directory`
 
 ## convert into exe
@@ -31,7 +31,7 @@ your folder must look like
 ![folder](https://habrastorage.org/files/c55/375/390/c553753903fc416c8ed2ed6c7392d3a0.png)
 
 ----
-## private.js
+## <a name="privatejs"></a>private.js
 ```javascript
 module.exports = {
 	 dn:"ldap://example.com"
