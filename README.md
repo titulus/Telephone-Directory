@@ -31,7 +31,7 @@ your folder must look like
 ![folder](https://habrastorage.org/files/c55/375/390/c553753903fc416c8ed2ed6c7392d3a0.png)
 
 ----
-## <a name="privatejs"></a>private.js
+## </a>private.js
 ```javascript
 module.exports = {
 	 dn:"ldap://example.com"
