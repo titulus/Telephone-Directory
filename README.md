@@ -13,17 +13,17 @@ telephone book based on MS ActiveDirectory
 
 ## convert into exe
 1. pack `telephone-directory` folder into `telephone-directory.zip` for example
-```bash
-7z a telephone-directory.zip path\to\telephone-directory\*
-```
+	```bash
+	7z a telephone-directory.zip path\to\telephone-directory\*
+	```
 2. rename `telephone-directory.zip` into `telephone-directory.nw`
-```bash
-rename telephone-directory.zip telephone-directory.nw
-```
+	```bash
+	rename telephone-directory.zip telephone-directory.nw
+	```
 3. do some magic
-```bash
-copy /b path\to\nw.exe+telephone-directory.nw telephone-directory.exe
-```
+	```bash
+	copy /b path\to\nw.exe+telephone-directory.nw telephone-directory.exe
+	```
 4. add all files from `node-webkit` folder to the folder contains `telephone-directory.exe` except `nw.exe`
 
 your folder must look like
