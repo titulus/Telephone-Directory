@@ -1,4 +1,4 @@
-// require('nw.gui').Window.get().showDevTools(); //show console at start
+require('nw.gui').Window.get().showDevTools(); //show console at start
 
 var credentials = require('./private.js'); //config include domain user and pass
 
@@ -14,7 +14,7 @@ ad.getUsersForGroup(groupName, function(err, users) {
 
   if (! users) console.log('Group: ' + groupName + ' not found.');
   else {
-    console.log(users);
+    // console.log(users);
     users2table(users);
     // sorter.init();
   }
@@ -31,8 +31,8 @@ function users2table (users) {
 		tablehtml+=	'<td>'+user.mail+'</td>'
 		tablehtml+='</tr>'
 	}
-	console.log(tablehtml);
+	// console.log(tablehtml);
 	$('#table tbody').html(tablehtml);
 	sorter.init();
-
+	$('#query').focus();
 }
