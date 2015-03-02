@@ -25,9 +25,9 @@ ad.getUsersForGroup(groupName, function(err, users) {
 if (localStorage.users) users2table(JSON.parse(localStorage.users));
 function users2table (users) {
 	tablehtml = '';
-	for (i in users) {
+	for (i=0; i<users.length;i++) {
 		var user = users[i];
-		// console.log(user);
+		console.log(user);
 		tablehtml+='<tr>';
 		tablehtml+=	'<td>'+user.cn+'</td>'
 		tablehtml+=	'<td>'+user.telephoneNumber+'</td>'
