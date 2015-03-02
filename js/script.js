@@ -1,4 +1,4 @@
-// require('nw.gui').Window.get().showDevTools(); //show console at start
+require('nw.gui').Window.get().showDevTools(); //show console at start
 require('nw.gui').Window.get().maximize(); //maximize windows on start
 
 var credentials = require('./private.js'); //config include domain user and pass
@@ -15,17 +15,19 @@ ad.getUsersForGroup(groupName, function(err, users) {
 
   if (! users) console.log('Group: ' + groupName + ' not found.');
   else {
-    // console.log(users);
-    users2table(users);
-    // sorter.init();
+  	var localusers = localStorage.users;
+  	var ldapusers = JSON.stringify(users);
+    if (localusers != ldapusers) {localStorage.users = JSON.stringify(users)} else {console.log('users didn\'t changed')};
+    users2table(JSON.parse(localStorage.users));
   }
 });
 
+if (localStorage.users) users2table(JSON.parse(localStorage.users));
 function users2table (users) {
 	tablehtml = '';
 	for (i in users) {
 		var user = users[i];
-		console.log(user);
+		// console.log(user);
 		tablehtml+='<tr>';
 		tablehtml+=	'<td>'+user.cn+'</td>'
 		tablehtml+=	'<td>'+user.telephoneNumber+'</td>'
