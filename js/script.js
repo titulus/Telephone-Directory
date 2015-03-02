@@ -40,3 +40,4 @@ function users2table (users) {
 	sorter.init();
 	$('#query').focus();
 }
+var prevquery='';
