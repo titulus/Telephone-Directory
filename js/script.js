@@ -27,7 +27,7 @@ function users2table (users) {
 	tablehtml = '';
 	for (i=0; i<users.length;i++) {
 		var user = users[i];
-		console.log(user);
+		// console.log(user);
 		tablehtml+='<tr>';
 		tablehtml+=	'<td>'+user.cn+'</td>'
 		tablehtml+=	'<td>'+user.telephoneNumber+'</td>'
