@@ -31,7 +31,7 @@ function users2table (users) {
 		tablehtml+='<tr>';
 		tablehtml+=	'<td>'+user.cn+'</td>'
 		tablehtml+=	'<td>'+((user.telephoneNumber)?user.telephoneNumber:'')+'</td>'
-		tablehtml+=	'<td>'+((user.mail)?user.mail:'')+'</td>'
+		tablehtml+=	'<td>'+((user.mail)?'<a href="mailto:'+user.mail+'">'+user.mail+'</a>':'')+'</td>'
 		tablehtml+=	'<td>'+((user.department)?user.department:'')+'</td>'
 		tablehtml+='</tr>'
 	}
