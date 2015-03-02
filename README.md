@@ -27,6 +27,7 @@ copy /b path\to\nw.exe+telephone-directory.nw telephone-directory.exe
 4. add all files from `node-webkit` folder to the folder contains `telephone-directory.exe` except `nw.exe`
 
 your folder must look like
+
 ![folder](https://habrastorage.org/files/c55/375/390/c553753903fc416c8ed2ed6c7392d3a0.png)
 
 ----
