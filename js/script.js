@@ -1,4 +1,5 @@
-require('nw.gui').Window.get().showDevTools(); //show console at start
+// require('nw.gui').Window.get().showDevTools(); //show console at start
+require('nw.gui').Window.get().maximize(); //maximize windows on start
 
 var credentials = require('./private.js'); //config include domain user and pass
 
