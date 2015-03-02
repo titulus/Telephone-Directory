@@ -8,7 +8,7 @@
 	<div id="tablewrapper">
 		<div id="tableheader">
         	<div class="search">
-                <select id="columns" onchange="sorter.search('query')"></select>
+                <!--<select id="columns" onchange="sorter.search('query')"></select>-->
                 <input type="text" id="query" onkeyup="sorter.search('query')" />
             </div>
             <span class="details">
@@ -27,7 +27,7 @@
             </thead>
             <tbody></tbody>
         </table>
-        <div id="tablefooter">
+        <!--<div id="tablefooter">
           <div id="tablenav">
             	<div>
                     <img src="images/first.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
@@ -55,7 +55,7 @@
                 </div>
                 <div class="page">Page <span id="currentpage"></span> of <span id="totalpages"></span></div>
             </div>
-        </div>
+        </div>-->
     </div>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/tinytable.js"></script>
@@ -70,15 +70,15 @@
 		oddselclass:'oddselected',
 		// paginate:true,
 		// size:10,
-		colddid:'columns',
-		currentid:'currentpage',
-		totalid:'totalpages',
-		startingrecid:'startrecord',
-		endingrecid:'endrecord',
-		totalrecid:'totalrecords',
-		hoverid:'selectedrow',
-		pageddid:'pagedropdown',
-		navid:'tablenav',
+		// colddid:'columns',
+		// currentid:'currentpage',
+		// totalid:'totalpages',
+		// startingrecid:'startrecord',
+		// endingrecid:'endrecord',
+		// totalrecid:'totalrecords',
+		// hoverid:'selectedrow',
+		// pageddid:'pagedropdown',
+		// navid:'tablenav',
 		sortcolumn:3,
 		sortdir:1,
 		// sum:[8],
