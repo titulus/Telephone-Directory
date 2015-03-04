@@ -36,26 +36,26 @@ function users2table (users) {
 		tablehtml+='<tr>';
 		tablehtml+=	'<td>'+user.cn+'</td>';
 		tablehtml+=	'<td>';
-			if (user.telephoneNumber) tablehtml+=user.telephoneNumber;
+			if (user.telephoneNumber) tablehtml+='<i class="fa fa-phone"></i>'+user.telephoneNumber;
 			if (user.otherTelephone) {
 				console.log(typeof user.otherTelephone,user.otherTelephone)
 				if (typeof user.otherTelephone == "string") {
-					tablehtml+='<br/>'+user.otherTelephone 
+					tablehtml+='<br/>'+'<i class="fa fa-phone"></i>'+user.otherTelephone;
 				} else {
-					for (otherTelephone in user.otherTelephone) tablehtml+='<br/>'+user.otherTelephone[otherTelephone];
+					for (otherTelephone in user.otherTelephone) tablehtml+='<br/>'+'<i class="fa fa-phone"></i>'+user.otherTelephone[otherTelephone];
 				}
 			}
-			if (user.mobile) tablehtml+='<br/>'+user.mobile;
+			if (user.mobile) tablehtml+='<br/>'+'<i class="fa fa-mobile fa-lg"></i>'+user.mobile;
 			if (user.otherMobile) {
 				console.log(typeof user.otherMobile,user.otherMobile)
 				if (typeof user.otherMobile == "string") {
-					tablehtml+='<br/>'+user.otherMobile 
+					tablehtml+='<br/>'+'<i class="fa fa-mobile fa-lg"></i>'+user.otherMobile;
 				} else {
-					for (otherMobile in user.otherMobile) tablehtml+='<br/>'+user.otherMobile[otherMobile];
+					for (otherMobile in user.otherMobile) tablehtml+='<br/>'+'<i class="fa fa-mobile fa-lg"></i>'+user.otherMobile[otherMobile];
 				}
 			}
-			if (user.homePhone) tablehtml+='<br/>'+user.homePhone;
-			if (user.facsimileTelephoneNumber) tablehtml+='<br/>'+user.facsimileTelephoneNumber;
+			if (user.homePhone) tablehtml+='<br/>'+'<i class="fa fa-home fa-lg"></i>'+user.homePhone;
+			if (user.facsimileTelephoneNumber) tablehtml+='<br/>'+'<i class="fa fa-fax"></i>'+user.facsimileTelephoneNumber;
 
 		tablehtml+= '</td>';
 		tablehtml+=	'<td>'+((user.mail)?'<a href="mailto:'+user.mail+'">'+user.mail+'</a>':'')+'</td>';
