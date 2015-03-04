@@ -27,9 +27,9 @@ your folder must look like
 ## </a>private.js
 ```javascript
 module.exports = {
-	 dn:"ldap://example.com"
-	,dc:"dc=example,dc=com"
-	,user:"user"
-	,pass:"pass"
+	 dn:"ldap://example.com" // use domain name, domain-controller name or domain-controller IP
+	,dc:"cn=users,dc=example,dc=com" //FQDN. you can remove "cn=users," from that field or chose other cn if you want.
+	,user:"user" // username with rights to read
+	,pass:"password" // password 
 };
 ```
