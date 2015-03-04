@@ -4,7 +4,7 @@ require('nw.gui').Window.get().maximize(); //maximize windows on start
 var credentials = require('./private.js'); //config include domain user and pass
 
 var ActiveDirectory = require('activedirectory');
-var ad = new ActiveDirectory(credentials.dn, credentials.dc, credentials.user, credentials.pass, {attributes: {user: [ 'cn', 'telephonenumber', 'mail', 'department', 'mobile', 'otherMobile']}});
+var ad = new ActiveDirectory(credentials.dn, credentials.dc, credentials.user, credentials.pass, {attributes: {user: [ 'cn', 'mail', 'department', 'telephonenumber', 'otherTelephone', 'mobile', 'otherMobile', 'homePhone', 'facsimileTelephoneNumber']}});
 
 var groupName = 'Employees';  // that how i call group with all real persons
 ad.getUsersForGroup(groupName, function(err, users) {
@@ -37,6 +37,14 @@ function users2table (users) {
 		tablehtml+=	'<td>'+user.cn+'</td>';
 		tablehtml+=	'<td>';
 			if (user.telephoneNumber) tablehtml+=user.telephoneNumber;
+			if (user.otherTelephone) {
+				console.log(typeof user.otherTelephone,user.otherTelephone)
+				if (typeof user.otherTelephone == "string") {
+					tablehtml+='<br/>'+user.otherTelephone 
+				} else {
+					for (otherTelephone in user.otherTelephone) tablehtml+='<br/>'+user.otherTelephone[otherTelephone];
+				}
+			}
 			if (user.mobile) tablehtml+='<br/>'+user.mobile;
 			if (user.otherMobile) {
 				console.log(typeof user.otherMobile,user.otherMobile)
@@ -46,6 +54,8 @@ function users2table (users) {
 					for (otherMobile in user.otherMobile) tablehtml+='<br/>'+user.otherMobile[otherMobile];
 				}
 			}
+			if (user.homePhone) tablehtml+='<br/>'+user.homePhone;
+			if (user.facsimileTelephoneNumber) tablehtml+='<br/>'+user.facsimileTelephoneNumber;
 
 		tablehtml+= '</td>';
 		tablehtml+=	'<td>'+((user.mail)?'<a href="mailto:'+user.mail+'">'+user.mail+'</a>':'')+'</td>';
