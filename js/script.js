@@ -38,8 +38,15 @@ function users2table (users) {
 		tablehtml+=	'<td>';
 			if (user.telephoneNumber) tablehtml+=user.telephoneNumber;
 			if (user.mobile) tablehtml+='<br/>'+user.mobile;
-			// for (otherMobile in user.otherMobile)
-			if (user.otherMobile) console.log(user.otherMobile)
+			if (user.otherMobile) {
+				console.log(typeof user.otherMobile,user.otherMobile)
+				if (typeof user.otherMobile == "string") {
+					tablehtml+='<br/>'+user.otherMobile 
+				} else {
+					for (otherMobile in user.otherMobile) tablehtml+='<br/>'+user.otherMobile[otherMobile];
+				}
+			}
+
 		tablehtml+= '</td>';
 		tablehtml+=	'<td>'+((user.mail)?'<a href="mailto:'+user.mail+'">'+user.mail+'</a>':'')+'</td>';
 		tablehtml+=	'<td>'+((user.department)?user.department:'')+'</td>';
