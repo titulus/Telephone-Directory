@@ -2,3 +2,6 @@
 	color: grey;
 	width: 14px;
 }
+@media print {
+	#tableheader {display: none;}
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Список сотрудников</title>
 	<meta charset="utf-8">
     <link rel="stylesheet" href="./css/style.css" />
 	<link rel="stylesheet" href="./css/tinytable.css" />
@@ -13,10 +14,12 @@
                 <!--<select id="columns" onchange="sorter.search('query')"></select>-->
                 <input type="text" id="query" onkeyup="if (prevquery!=this.value) {sorter.reset(); sorter.search('query'); prevquery=this.value}" />
             </div>
-            <!-- <span class="details">
-				<div>Records <span id="startrecord"></span>-<span id="endrecord"></span> of <span id="totalrecords"></span></div>
-        		<div><a href="javascript:sorter.reset()">reset</a></div>
-        	</span> -->
+            
+            <span class="details">
+				<!-- <div>Records <span id="startrecord"></span>-<span id="endrecord"></span> of <span id="totalrecords"></span></div>
+        		<div><a href="javascript:sorter.reset()">reset</a></div> -->
+                <div><a href="javascript:window.print()"><i class="fa fa-print"></i> Печать</a></div>
+        	</span>
         </div>
         <table cellpadding="0" cellspacing="0" border="0" id="table" class="tinytable">
             <thead>
