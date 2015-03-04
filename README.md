@@ -1,6 +1,6 @@
 # Telephone-Directory
 telephone book based on MS ActiveDirectory
-![folder](https://habrastorage.org/files/538/888/1c9/5388881c9346474ba27bcc781cc095aa.png)
+![folder](https://habrastorage.org/files/a43/51d/c32/a4351dc3221243d285bd3bdbec2cca1a.png)
 
 ## require
 + [node-webkit](http://nwjs.io/)
