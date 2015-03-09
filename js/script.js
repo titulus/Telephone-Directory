@@ -21,8 +21,9 @@ ad.getUsersForGroup(groupName, function(err, users) {
     if (localusers != ldapusers) {
     	localStorage.users = JSON.stringify(users);
     	console.info('users changed');
+    	users2table(JSON.parse(localStorage.users));
     } else {console.log('users didn\'t changed')};
-    users2table(JSON.parse(localStorage.users));
+    
     // users2table(users)
   }
 });
