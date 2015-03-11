@@ -17,10 +17,10 @@
 	text-transform: uppercase;
 }
 #table th.asc > :after {
-	content: '￪'
+	content: '￬'
 }
 #table th.desc > :after {
-	content: '￬'
+	content: '￪'
 }
 #table .phone {
 	white-space: nowrap;
