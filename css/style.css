@@ -1,7 +1,40 @@
-.fa {
+#menu {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 0 10px lightgrey;
+}
+#table {
+	margin-top: 42px;
+}
+#table > thead {
+	background: white;
+	box-shadow: 0 0 10px lightgrey;
+}
+#table > thead h3 {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+#table th.asc > :after {
+	content: '￪'
+}
+#table th.desc > :after {
+	content: '￬'
+}
+#table .phone {
+	white-space: nowrap;
+}
+.icon {
+	display: inline-block;
 	color: grey;
-	width: 14px;
+	width: 24px;
+	text-align: center;
 }
 @media print {
-	#tableheader {display: none;}
+	#menu {display: none;}
+	#table {
+		width: normal;
+		margin-top: 0;
+	}
 }
