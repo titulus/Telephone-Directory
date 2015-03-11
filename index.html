@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-	<menu id="menu" class="uk-navbar">
-		<li class="uk-navbar-brand">asd</li>
-		<li class="uk-navbar-content"><input type="text" id="query" onkeyup="if (prevquery!=this.value) {sorter.reset(); sorter.search('query'); prevquery=this.value}" /></li>
-		<li class="uk-navbar-flip"><a href="javascript:window.print()"><i class="fa fa-print"></i> Печать</a></li>
-	</menu>
+	<nav class="uk-navbar">
+		<span class="uk-navbar-brand" href="#">Brand</span>
+		<menu class="uk-navbar-nav">
+			<li class="uk-navbar-content">
+				<form class="uk-form uk-display-inline-block">
+					<input id="query" type="text" placeholder="Поиск" onkeyup="if (prevquery!=this.value) {sorter.reset(); sorter.search('query'); prevquery=this.value}" />
+				</form>
+			</li>
+		</menu>
+	    <div class="uk-navbar-flip">
+	        <ul class="uk-navbar-nav">
+	            <li class="uk-active"><a href="javascript:window.print()"><i class="fa fa-print"></i> Печать</a></li>
+	        </ul>
+	    </div>
+	</nav>
 	<div id="tablewrapper">
         <table cellpadding="0" cellspacing="0" border="0" id="table" class="tinytable">
             <thead>
