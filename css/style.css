@@ -3,14 +3,14 @@
 	width: 100%;
 	top: 0;
 	z-index: 100;
-	box-shadow: 0 0 10px lightgrey;
+	box-shadow: 0 0 10px #777;
 }
 #table {
-	margin-top: 42px;
+	margin: 42px 0 0;
 }
 #table > thead {
 	background: white;
-	box-shadow: 0 0 10px lightgrey;
+	box-shadow: 0 0 5px #555;
 }
 #table > thead h3 {
 	cursor: pointer;
@@ -21,6 +21,12 @@
 }
 #table th.desc > :after {
 	content: '￪'
+}
+#table th {
+	padding-left: 3em;
+}
+#table td {
+	padding-left: 2em;
 }
 #table .phone {
 	white-space: nowrap;
