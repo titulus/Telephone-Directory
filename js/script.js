@@ -3,7 +3,7 @@ require('nw.gui').Window.get().maximize(); //maximize windows on start
 
 var credentials = require('./private.js'); //config include domain user and pass
 
-var ActiveDirectory = require('activedirectory');
+var ActiveDirectory = require('activedirectory');  // Active Directory module
 var ad = new ActiveDirectory(credentials.dn, credentials.dc, credentials.user, credentials.pass, {attributes: {user: [ 'cn', 'mail', 'department', 'title', 'telephonenumber', 'otherTelephone', 'mobile', 'otherMobile', 'homePhone', 'facsimileTelephoneNumber']}});
 
 var groupName = 'Employees';  // that how i call group with all real persons
