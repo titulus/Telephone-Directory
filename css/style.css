@@ -15,6 +15,7 @@
 #table > thead h3 {
 	cursor: pointer;
 	text-transform: uppercase;
+	margin: .5em 0 0;
 }
 #table th.asc > :after {
 	content: '￬'
