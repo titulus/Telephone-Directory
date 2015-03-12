@@ -1,6 +1,8 @@
 // require('nw.gui').Window.get().showDevTools(); //show console at start
 require('nw.gui').Window.get().maximize(); //maximize windows on start
 
+var prevquery=''; // Previous query for searching in table
+
 var credentials = require('./private.js'); //config include domain user and pass
 
 var ActiveDirectory = require('activedirectory');  // Active Directory module
@@ -68,5 +70,5 @@ function users2table (users) {
 	sorter.init();
 	$('#query').focus();
 }
-var prevquery='';
+
 $('#table').stickyTableHeaders({fixedOffset: $('#menu')});
