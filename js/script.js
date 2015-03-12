@@ -71,4 +71,6 @@ function users2table (users) {
 	$('#query').focus();
 }
 
-$('#table').stickyTableHeaders({fixedOffset: $('#menu')});
+$(document).ready(function () {
+	$('#table').stickyTableHeaders({fixedOffset: $('#menu')}); // initiate stiky mode for table header
+});
