@@ -39,9 +39,22 @@
 	text-align: center;
 }
 @media print {
+	html {
+		font-size: 6px / 8px
+	}
 	#menu {display: none;}
 	#table {
 		width: normal;
 		margin-top: 0;
 	}
+	#table td {
+		padding-bottom: 0;
+		padding-top: 0;
+		padding-left: 0;
+	}
+	#table .evenrow {
+		background: #f9f9f9 !important;
+	}
+	.fa {display: none;}
+
 }
