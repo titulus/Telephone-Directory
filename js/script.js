@@ -80,6 +80,9 @@ $(document).ready(function () {
 		}
 	});
 
+	$('#print').on('click',function() {
+		window.print();
+	})
 	
 	$('#table').stickyTableHeaders({fixedOffset: $('#menu')}); // initiate stiky mode for table header
 });
