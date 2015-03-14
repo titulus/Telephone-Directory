@@ -1,8 +1,6 @@
 // require('nw.gui').Window.get().showDevTools(); //show console at start
 require('nw.gui').Window.get().maximize(); //maximize windows on start
 
-var prevquery=''; // Previous query for searching in table
-
 var credentials = require('./private.js'); //config include domain user and pass
 
 var ActiveDirectory = require('activedirectory');  // Active Directory module
@@ -72,5 +70,16 @@ function users2table (users) {
 }
 
 $(document).ready(function () {
+
+	var prevquery=''; // Previous query for searching in table
+	$('#query').on('keyup',function (argument) {
+		if (prevquery!=this.value) {
+			sorter.reset();
+			sorter.search('query');
+			prevquery=this.value;
+		}
+	});
+
+	
 	$('#table').stickyTableHeaders({fixedOffset: $('#menu')}); // initiate stiky mode for table header
 });
