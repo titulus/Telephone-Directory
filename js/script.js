@@ -72,7 +72,7 @@ function users2table (users) {
 $(document).ready(function () {
 
 	var prevquery=''; // Previous query for searching in table
-	$('#query').on('keyup',function (argument) {
+	$('#query').on('keyup',function () {
 		if (prevquery!=this.value) {
 			sorter.reset();
 			sorter.search('query');
