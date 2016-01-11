@@ -14,14 +14,8 @@ telephone book based on MS ActiveDirectory
 5. run `path\to\nw path\to\telephone-directory`
 
 ## convert into exe
-1. pack `telephone-directory` folder into `telephone-directory.zip` for example `7z a telephone-directory.zip path\to\telephone-directory\*`
-2. rename `telephone-directory.zip` into `telephone-directory.nw` `rename telephone-directory.zip telephone-directory.nw`
-3. do some magic `copy /b path\to\nw.exe+telephone-directory.nw telephone-directory.exe`
-4. add all files from `node-webkit` folder to the folder contains `telephone-directory.exe` except `nw.exe`
 
-your folder must look like
-
-![folder](https://habrastorage.org/files/c55/375/390/c553753903fc416c8ed2ed6c7392d3a0.png)
+Use [Web2Executable](https://github.com/jyapayne/Web2Executable).
 
 ----
 ## </a>settings.js
