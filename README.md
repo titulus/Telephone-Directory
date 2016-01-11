@@ -1,6 +1,6 @@
 # Telephone-Directory
 telephone book based on MS ActiveDirectory
-![folder](https://habrastorage.org/files/a43/51d/c32/a4351dc3221243d285bd3bdbec2cca1a.png)
+![folder](https://habrastorage.org/files/4e5/337/cda/4e5337cda41346bdbfc00c8096675eaf.png)
 
 ## require
 + [node-webkit](http://nwjs.io/)
@@ -10,7 +10,7 @@ telephone book based on MS ActiveDirectory
 1. first of all install [node-webkit](http://nwjs.io/)
 2. download and unpack last [release](https://github.com/titulus/Telephone-Directory/releases)
 3. install [node-activedirectory](https://github.com/gheeres/node-activedirectory)
-4. add `private.js` into the source folder and [fill](#privatejs) it
+4. [configure](#settingsjs)  `settings.js`
 5. run `path\to\nw path\to\telephone-directory`
 
 ## convert into exe
@@ -24,12 +24,13 @@ your folder must look like
 ![folder](https://habrastorage.org/files/c55/375/390/c553753903fc416c8ed2ed6c7392d3a0.png)
 
 ----
-## </a>private.js
+## </a>settings.js
 ```javascript
 module.exports = {
 	 dn:"ldap://example.com" // use domain name, domain-controller name or domain-controller IP
 	,dc:"cn=users,dc=example,dc=com" //FQDN. you can remove "cn=users," from that field or chose other cn if you want.
 	,user:"user" // username with rights to read
 	,pass:"password" // password 
+    ,groupname: "Employees" // Employees group
 };
 ```
