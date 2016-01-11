@@ -26,6 +26,5 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
-settings.js
 users.json
 *.sublime*
