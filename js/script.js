@@ -1,7 +1,7 @@
 // require('nw.gui').Window.get().showDevTools(); //show console at start
 require('nw.gui').Window.get().maximize(); //maximize windows on start
 
-var credentials = require('./private.js'); //config include domain user and pass
+var credentials = require('./settings.js'); //config include domain user and pass
 
 var ActiveDirectory = require('activedirectory');  // Active Directory module
 var ad = new ActiveDirectory(credentials.dn, credentials.dc, credentials.user, credentials.pass, {attributes: {user: [ 'cn', 'mail', 'department', 'title', 'telephonenumber', 'otherTelephone', 'mobile', 'otherMobile', 'homePhone', 'facsimileTelephoneNumber']}});
