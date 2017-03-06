@@ -1,0 +1,7 @@
+{
+     "dn": "ldap://example.com"
+    ,"dc": "cn=users,dc=example,dc=com"
+    ,"user": "username"
+    ,"pass": "password"
+    ,"groupname": "Employees"
+}

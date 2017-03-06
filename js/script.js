@@ -1,11 +1,21 @@
 require('nw.gui').Window.get().maximize(); //maximize windows on start
-console.log('asd')
-var credentials = require('./settings.js'); //config include domain user and pass
+console.log(process.env)
+var fs = require('fs');
+var path = require('path');
+
+var credentials;
+try {
+  credentials = fs.readFileSync('settings.json');
+  credentials = JSON.parse(credentials);
+} catch(e) {
+  console.log(e);
+}
+
 
 var ActiveDirectory = require('activedirectory');  // Active Directory module
 var ad = new ActiveDirectory(credentials.dn, credentials.dc, credentials.user, credentials.pass, {attributes: {user: [ 'cn', 'mail', 'department', 'title', 'telephonenumber', 'otherTelephone', 'mobile', 'otherMobile', 'homePhone', 'facsimileTelephoneNumber']}});
 
-var groupName = 'Employees';  // that how i call group with all real persons
+var groupName = credentials.groupname;  // that how i call group with all real persons
 ad.getUsersForGroup(groupName, function(err, users) {
   if (err) {
     console.log('ERROR: ' +JSON.stringify(err));
