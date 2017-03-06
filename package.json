@@ -4,5 +4,8 @@
   "window": {
     "title": "Telephone Directory",
     "toolbar": false
+  },
+  "dependencies": {
+    "activedirectory": "^0.7.2"
   }
 }

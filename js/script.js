@@ -1,6 +1,5 @@
-// require('nw.gui').Window.get().showDevTools(); //show console at start
 require('nw.gui').Window.get().maximize(); //maximize windows on start
-
+console.log('asd')
 var credentials = require('./settings.js'); //config include domain user and pass
 
 var ActiveDirectory = require('activedirectory');  // Active Directory module
