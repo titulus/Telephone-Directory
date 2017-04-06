@@ -13,16 +13,15 @@ try {
 
 
 var ActiveDirectory = require('activedirectory');  // Active Directory module
-var ad = new ActiveDirectory(credentials.dn, credentials.dc, credentials.user, credentials.pass, {attributes: {user: [ 'cn', 'mail', 'department', 'title', 'telephonenumber', 'otherTelephone', 'mobile', 'otherMobile', 'homePhone', 'facsimileTelephoneNumber']}});
+var ad = new ActiveDirectory(credentials.dn, credentials.dc, credentials.user, credentials.pass, {attributes: {user: [ 'cn', 'mail', 'department', 'title', 'telephoneNumber', 'otherTelephone', 'mobile', 'otherMobile', 'homePhone', 'facsimileTelephoneNumber']}});
 
-var groupName = credentials.groupname;  // that how i call group with all real persons
-ad.getUsersForGroup(groupName, function(err, users) {
+ad.getUsersForGroup(credentials.groupname, function(err, users) {
   if (err) {
     console.log('ERROR: ' +JSON.stringify(err));
     return;
   }
 
-  if (! users) console.log('Group: ' + groupName + ' not found.');
+  if (! users) console.log('Group: ' + credentials.groupname + ' not found.');
   else {
   	var localusers = localStorage.users;
   	var ldapusers = JSON.stringify(users);
