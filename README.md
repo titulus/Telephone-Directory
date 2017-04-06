@@ -9,7 +9,7 @@ telephone book based on MS ActiveDirectory
 
 ## usage
 1. first of all install [node-webkit](http://nwjs.io/)
-2. download and unpack last [release](https://github.com/titulus/Telephone-Directory/releases)
+2. download and unpack ~~last [release](https://github.com/titulus/Telephone-Directory/releases)~~ [master](https://github.com/titulus/Telephone-Directory/archive/master.zip)
 3. install dependencies `npm i`
 4. [configure](#settingsjson)  `settings.json`
 5. run `path\to\nw path\to\telephone-directory`
