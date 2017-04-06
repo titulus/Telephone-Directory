@@ -23,8 +23,8 @@ Use [Web2Executable](https://github.com/jyapayne/Web2Executable).
 ```json
 {
      "dn": "ldap://example.com"
-    ,"dc": "cn=users,dc=example,dc=com"
-    ,"user": "username"
+    ,"dc": "dc=example,dc=com"
+    ,"user": "username@example.com"
     ,"pass": "password"
     ,"groupname": "Employees"
 }
